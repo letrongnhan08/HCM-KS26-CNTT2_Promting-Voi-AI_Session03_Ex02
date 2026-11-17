@@ -27,7 +27,7 @@ Tóm tắt (summary):
    - Viết bằng tiếng Việt, ngắn gọn dưới 15 từ.
    - Lọc bỏ các từ cảm xúc, từ thừa thãi 
 Xử lý ngoại lệ (Edge Cases):
-   - Nếu thấy các thông tin trống, chỉ chứa khoảng trắng hoặc thông tin không rõ ràng thì ghi đưa "invalid" vào các trường bị trống
+   - Nếu thấy các thông tin trống, chỉ chứa khoảng trắng hoặc thông tin không rõ ràng,hoặc các ký tự đặc biệt thì ghi đưa "invalid" vào các trường bị trống
 
 **Action (Hành động & Ví dụ mẫu - Few-Shot):**
 
@@ -43,7 +43,7 @@ Output: {"sentiment": "Positive", "topics": ["Delivery"], "score": 5, "summary":
 Input: "app cũng ổn, giao hàng nhanh và có nhiều khuyến mãi món hàng nhưng lag quá"
 Output: {"sentiment": "Neutral", "topics": ["Delivery" , System], "score": 3, "summary": "app giao hàng nhanh,có nhiều khuyến mãi, nhưng app lag"}
 
-Input: "APP không hay,dở"
+Input: "APP không hay,dở, như c0m c@p"
 Output: {"sentiment": "Negative", "topics": ["invalid"], "score": 1, "summary": "invalid"}
 
 **Tone (Giọng điệu):**
@@ -51,3 +51,4 @@ Khách quan, chính xác, trung thực và không thiên kiến, chuyên nghiệ
 
 **EXTRAS (Ràng buộc kỹ thuật bắt buộc):**
 - Không được sử dụng bất kỳ định dạng văn bản trang trí nào ngoài JSON thô.
+- Đảm bảo đầu ra có định dạng cấu trúc JSON sạch để tích hợp vào Dashboard phân tích
